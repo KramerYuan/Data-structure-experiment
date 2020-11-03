@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1603977614 source:e:\数据结构\exercise2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+
