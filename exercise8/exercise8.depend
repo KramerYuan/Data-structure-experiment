@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607914516 source:e:\数据结构\exercise8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

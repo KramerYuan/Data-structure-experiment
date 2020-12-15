@@ -143,65 +143,56 @@ SeqList merge(SeqList L1,SeqList L2)
     return L3;
 }
 
-
-
-
-
-
-
-int main()
-{
-    SeqList L1, L2, L3;
-    ListInitiate(&L1);
-    ListInitiate(&L2);
-    ListInitiate(&L3);
-    int i, num, x;
-    for(num=0, i=0; i<5; i++, num+=3)
-    {
-        ListInsert(&L1, i, num);
-    }
-    for(num=0, i=0; i<5; i++, num+=2)
-    {
-        ListInsert(&L2, i, num);
-    }
-
-    for(i=0; i<ListLength(L1); i++)
-    {
-        ListGet(L1, i, &x);
-        printf("%d\t", x);
-    }
-    printf("\n");
-    for(i=0; i<ListLength(L2); i++)
-    {
-        ListGet(L2, i, &x);
-        printf("%d\t", x);
-    }
-    printf("\n");
-    L3 = merge(L1, L2);
-    for(i=0; i<ListLength(L3); i++)
-    {
-        ListGet(L3, i, &x);
-        printf("%d\t", x);
-    }
-}
-
-
-
-
-
-
-/*任务1代码*/
-//void main(void)
+/*任务二主函数*/
+//int main()
 //{
-//    SeqList myList;
-//    int i, x;
-//    ListInitiate(&myList);
-//    for(i = 0; i < 10; i++)
-//        ListInsert(&myList, i, i+1);
-//    ListDelete(&myList, 4, &x);
-//    for(i = 0; i < ListLength(myList); i++)
+//    SeqList L1, L2, L3;
+//    ListInitiate(&L1);
+//    ListInitiate(&L2);
+//    ListInitiate(&L3);
+//    int i, num, x;
+//    for(num=0, i=0; i<5; i++, num+=3)
 //    {
-//        ListGet(myList,i,&x); //此段程序有一处错误
+//        ListInsert(&L1, i, num);
+//    }
+//    for(num=0, i=0; i<5; i++, num+=2)
+//    {
+//        ListInsert(&L2, i, num);
+//    }
+//
+//    for(i=0; i<ListLength(L1); i++)
+//    {
+//        ListGet(L1, i, &x);
+//        printf("%d\t", x);
+//    }
+//    printf("\n");
+//    for(i=0; i<ListLength(L2); i++)
+//    {
+//        ListGet(L2, i, &x);
+//        printf("%d\t", x);
+//    }
+//    printf("\n");
+//    L3 = merge(L1, L2);
+//    for(i=0; i<ListLength(L3); i++)
+//    {
+//        ListGet(L3, i, &x);
 //        printf("%d\t", x);
 //    }
 //}
+
+
+/*任务1主函数*/
+void main(void)
+{
+    SeqList myList;
+    int i, x;
+    ListInitiate(&myList);
+    for(i = 0; i < 10; i++)
+        ListInsert(&myList, i, i+1);
+    ListDelete(&myList, 4, &x);
+    for(i = 0; i < ListLength(myList); i++)
+    {
+        ListGet(myList,i,&x); //此段程序有一处错误
+        printf("%d\t", x);
+    }
+}

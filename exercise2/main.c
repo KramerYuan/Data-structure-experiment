@@ -189,98 +189,97 @@ SLNode* merge(SLNode *L1, SLNode *L2, SLNode *L3)
 }
 
 
-
-int main()
-{
-    SLNode *L1, *L2, *L3;
-    int i, x;
-    ListInitiate(&L1);
-    ListInitiate(&L2);
-    ListInitiate(&L3);
-    // 给L1链表赋值
-    for(i=0; i<10; i++)
-    {
-        if(ListInsert(L1, i, 3*i) == 0)
-        {
-            printf("错误! \n");
-            return 0;
-        }
-    }
-    // 给L2链表赋值
-    for(i=0; i<10; i++)
-    {
-        if(ListInsert(L2, i, 2*i+5) == 0)
-        {
-            printf("错误! \n");
-            return 0;
-        }
-    }
-    // 打印L1链表中的元素
-    for(i = 0; i < ListLength(L1); i++)
-    {
-        if(ListGet(L1, i, &x) == 0) /*取元素*/
-        {
-            printf("错误! \n");
-            return 0;
-        }
-        else printf("%d    ", x);/*显示数据元素*/
-    }
-    // 打印L2链表中的元素
-    printf("\n");
-    for(i = 0; i < ListLength(L2); i++)
-    {
-        if(ListGet(L2, i, &x) == 0) /*取元素*/
-        {
-            printf("错误! \n");
-            return 0;
-        }
-        else printf("%d    ", x);/*显示数据元素*/
-    }
-    L3 = merge(L1, L2, L3);
-
-    printf("\n");
-    for(i = 0; i < ListLength(L3); i++)
-    {
-        if(ListGet(L3, i, &x) == 0) /*取元素*/
-        {
-            printf("错误! \n");
-            return 0;
-        }
-        else printf("%d    ", x);/*显示数据元素*/
-    }
-}
-
-
-
-
-
-//void main(void)
+/*任务二主函数*/
+//int main()
 //{
-//    SLNode *head;
+//    SLNode *L1, *L2, *L3;
 //    int i, x;
-//    ListInitiate(&head);/*初始化*/
-//    for(i = 0; i < 10; i++)
+//    ListInitiate(&L1);
+//    ListInitiate(&L2);
+//    ListInitiate(&L3);
+//    // 给L1链表赋值
+//    for(i=0; i<10; i++)
 //    {
-//        if(ListInsert(head, i, i+1) == 0) /*插入10个数据元素*/
+//        if(ListInsert(L1, i, 3*i) == 0)
 //        {
 //            printf("错误! \n");
-//            return;
+//            return 0;
 //        }
 //    }
-//    if(ListDelete(head, 4, &x) == 0) /*删除数据元素5*/
+//    // 给L2链表赋值
+//    for(i=0; i<10; i++)
 //    {
-//        printf("错误! \n");
-//        return;
-//    }
-//    for(i = 0; i < ListLength(head); i++)
-//    {
-//        if(ListGet(head, i, &x) == 0) /*取元素*/
+//        if(ListInsert(L2, i, 2*i+5) == 0)
 //        {
 //            printf("错误! \n");
-//            return;
+//            return 0;
+//        }
+//    }
+//    // 打印L1链表中的元素
+//    for(i = 0; i < ListLength(L1); i++)
+//    {
+//        if(ListGet(L1, i, &x) == 0) /*取元素*/
+//        {
+//            printf("错误! \n");
+//            return 0;
 //        }
 //        else printf("%d    ", x);/*显示数据元素*/
 //    }
+//    // 打印L2链表中的元素
+//    printf("\n");
+//    for(i = 0; i < ListLength(L2); i++)
+//    {
+//        if(ListGet(L2, i, &x) == 0) /*取元素*/
+//        {
+//            printf("错误! \n");
+//            return 0;
+//        }
+//        else printf("%d    ", x);/*显示数据元素*/
+//    }
+//    L3 = merge(L1, L2, L3);
 //
-//    Destroy(&head);
+//    printf("\n");
+//    for(i = 0; i < ListLength(L3); i++)
+//    {
+//        if(ListGet(L3, i, &x) == 0) /*取元素*/
+//        {
+//            printf("错误! \n");
+//            return 0;
+//        }
+//        else printf("%d    ", x);/*显示数据元素*/
+//    }
 //}
+
+
+
+/*任务一主函数*/
+void main(void)
+{
+    SLNode *head;
+    int i, x;
+    ListInitiate(&head);/*初始化*/
+    for(i = 0; i < 10; i++)
+    {
+        if(ListInsert(head, i, i+1) == 0) /*插入10个数据元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
+    }
+    if(ListDelete(head, 4, &x) == 0) /*删除数据元素5*/
+    {
+        printf("错误! \n");
+        return;
+    }
+    for(i = 0; i < ListLength(head); i++)
+    {
+        if(ListGet(head, i, &x) == 0) /*取元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
+        else printf("%d    ", x);/*显示数据元素*/
+    }
+
+    Destroy(&head);
+}
